@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.bg-white{
+    background-color: white;
+}
+
 i.fa-solid{
     margin: .2em;
 }
@@ -12,13 +16,13 @@ i.fa-solid{
     border-bottom: 1px solid black;
 }
 
-#new-message .fa-solid{
-    font-size: 30px;
+/* #new-message .fa-solid{
+    font-size: 20px;
     background-color: white;
-    padding: 10px;
+    padding: 9px;
     border-radius: 50%;
     color: #8edafc;
-}
+} */
 
 .title{
     font-size: 25px;
@@ -37,34 +41,31 @@ i.fa-solid{
     align-items: center;
 }
 
-div.container{
+#app .container{
     display: flex;
     height: 600px; 
-    border: 3px solid black;
+    outline: 3px solid white;
+    padding: 0;
 }
 
 .container_chat{
     width: 35%;
     height: 100%;
-    border: 3px solid red;
 }
 
 .container_message{
     width: 65%;
     height: 100%;
-    border: 3px solid blue;
 }
 
 .profile-pic{
     width: 100%;
-    height: 50px;
-    border: 1px solid black;
+    padding: 8px;
     background-color: lightgray;
 }
 
-img{
+.rounded-circle{
     height: 50px;
-    border-radius: 50%;
 }
 
 i{
@@ -78,10 +79,12 @@ i{
     background-color: #8edafc;
 }
 
-.background{
+.background-image{
     height: 100%;
-    background-image: url(/img/mine.jpg);
+    background-image: url("../img/mine.jpg");
     object-fit: cover;
+    background-repeat: repeat;
+
 }
 
 span.input-group-text{

@@ -14,12 +14,12 @@
         <div id="app" class="container_all">
             <div class="container">
                 <!-- Sinistra -->
-                <div class="container_chat">
+                <div class="container_chat d-flex flex-column">
                     <div class="row-profile">
                         <!-- Immafgine del profilo e icone notifiche -->
                         <div id="profile-left" class="profile-pic col-profile d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="./img/avatar_1.jpg" alt="">
+                            <div class="d-flex align-items-center ">
+                                <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
                                 <div class="p-2 title">ciccio</div>
                             </div>
                             <div class="notification">
@@ -31,8 +31,10 @@
 
                         <!-- Nuovi messaggi -->
                         <div id="new-message" class="d-flex align-items-center">
-                            <div class="new-message p-3 d-flex">
-                                <i class="fa-solid fa-bell-slash"></i>
+                            <div class="new-message p-3 d-flex " >
+                                <div class="rounded-circle">
+                                    <i class="fa-solid fa-bell-slash" ></i>
+                                </div>
                                 <div class="ps-3">
                                     <div>Ricevi notifiche di nuovi messaggi</div>
                                     <div><a href="#"> Attiva notifiche desktop</a></div>
@@ -40,17 +42,18 @@
                             </div>
                         </div>
                     </div>
-                    <div id="input" class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
+                    
+                    <div id="input" class="input-group input-group-sm">
+                        <div class="input-group-prepend ">
                           <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" class="form-control " aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                       </div>
                         <!-- chat -->
-                      <div id="profile-left" class="bordbot">
+                      <div id="profile-left" class="bordbot h-100 bg-white">
                         <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="./img/avatar_1.jpg" alt="">
+                            <div class="d-flex align-items-center p-2">
+                                <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
                                 <div class="p-2">
                                     <div class="title">ciccio</div>
                                     <div>Ultimo messaggio inviato</div>
@@ -58,10 +61,6 @@
                             </div>
                             <div>orario</div>  
                         </div>
-
-
-
-
                     </div>
 
 
@@ -70,11 +69,11 @@
                 <!-- Destra -->
 
                 <!-- Immagine di profilo ed icone -->
-                <div class="container_message d-flex flex-column justify-content-between background">
+                <div class="container_message d-flex flex-column justify-content-between">
                     <div class="row-profile">
                         <div class="profile-pic col-profile d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
-                                <img src="./img/avatar_1.jpg" alt="">
+                                <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
                                 <div class="p-2 title">ciccio</div>
                             </div>
                             <div class="notification">
@@ -84,9 +83,13 @@
                             </div>
                         </div>                       
                     </div>
-
-                    <div class="background">
-
+                    <!-- Sfondo chat -->
+                    <div id="chat" class="row-chat h-100 background-image">
+                        <div class="col-chat">
+                            <div>
+                            
+                            </div>
+                        </div>
                     </div>
                     <!-- Input messaggi -->
                     <div class="row-profile">
