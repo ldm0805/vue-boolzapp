@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+i.fa-solid{
+    margin: .2em;
+}
+
+.bordbot{
+    border-bottom: 1px solid black;
+}
+
+#new-message .fa-solid{
+    font-size: 30px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: #8edafc;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.container_all{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(217,219,210);
+    background: -moz-linear-gradient(0deg, rgba(217,219,210,1) 85%, rgba(0,150,136,1) 85%);
+    background: -webkit-linear-gradient(0deg, rgba(217,219,210,1) 85%, rgba(0,150,136,1) 85%);
+    background: linear-gradient(0deg, rgba(217,219,210,1) 85%, rgba(0,150,136,1) 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d9dbd2",endColorstr="#009688",GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container{
+    display: flex;
+    height: 600px; 
+    border: 3px solid black;
+}
+
+.container_chat{
+    width: 35%;
+    height: 100%;
+    border: 3px solid red;
+}
+
+.container_message{
+    width: 65%;
+    height: 100%;
+    border: 3px solid blue;
+}
+
+.profile-pic{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+i{
+    font-size: 20px;
+    padding: 5px;
+    color: grey;
+}
+
+.new-message{
+    width: 100%;
+    background-color: #8edafc;
+}
+
+.background{
+    height: 100%;
+    background-image: url(/img/mine.jpg);
+    object-fit: cover;
+}
+
+span.input-group-text{
+    background-color: white;
+}
