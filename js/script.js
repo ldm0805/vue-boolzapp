@@ -5,6 +5,9 @@ const {
 createApp({
     data(){
         return{
+            activeItem: 0,
+            
+            newMessage: '',
             contacts: [
                 {
                 name: 'Michele',
@@ -172,6 +175,18 @@ createApp({
     },
     methods:{
         imgProfile(index){
-            return "./img/avatar" + this.contacts[index].avatar + ".jpg";}
+            return "./img/avatar" + this.contacts[index].avatar + ".jpg";
+        },
+        // addMessage(){
+        //     let object = {
+        //         message: this.newMessage,
+        //         status :'sent' ,
+        //     }
+        //     this.contacts.push(object);
+        //     this.newMessage = '';
+        // },
+        selectedChat(index){
+            this.activeItem = index
+        },
     }
 }).mount('#app');

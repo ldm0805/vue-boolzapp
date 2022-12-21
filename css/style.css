@@ -16,6 +16,13 @@ i.fa-solid{
     border-bottom: 1px solid black;
 }
 
+i:hover{
+    cursor: pointer;
+}
+.bordbot:hover{
+    background-color: rgba(128, 128, 128, 0.493);
+    cursor: pointer;
+}
 /* #new-message .fa-solid{
     font-size: 20px;
     background-color: white;
@@ -25,7 +32,7 @@ i.fa-solid{
 } */
 
 .title{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 .container_all{
@@ -43,7 +50,8 @@ i.fa-solid{
 
 #app .container{
     display: flex;
-    height: 600px; 
+    height: 80%; 
+    width: 75%;
     outline: 3px solid white;
     padding: 0;
 }
@@ -80,6 +88,7 @@ i{
 }
 
 .background-image{
+    position: relative;
     height: 100%;
     background-image: url("../img/mine.jpg");
     object-fit: cover;
@@ -93,4 +102,18 @@ span.input-group-text{
 
 #profile-left{
     overflow-y: auto;
+}
+
+.received{
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    padding: 10px;
+    margin: 1em;
+    border-radius: 20px;
 }
