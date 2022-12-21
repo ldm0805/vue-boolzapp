@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .bg-white{
@@ -12,6 +14,13 @@ i.fa-solid{
     margin: .2em;
 }
 
+.fnt-small{
+    font-size: x-small;
+}
+
+.bg-gray{
+    background-color: rgba(192, 192, 192, 0.192);
+}
 .bordbot{
     border-bottom: 1px solid black;
 }
@@ -20,7 +29,7 @@ i:hover{
     cursor: pointer;
 }
 .bordbot:hover{
-    background-color: rgba(128, 128, 128, 0.493);
+
     cursor: pointer;
 }
 /* #new-message .fa-solid{
