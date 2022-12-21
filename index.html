@@ -20,7 +20,7 @@
                         <div id="profile-left" class="profile-pic col-profile d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center ">
                                 <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
-                                <div class="p-2 title">ciccio</div>
+                                <div class="p-2 title">Leonardo</div>
                             </div>
                             <div class="notification">
                                 <i class="fa-solid fa-circle-notch"></i>
@@ -50,19 +50,22 @@
                         <input type="text" class="form-control " aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                       </div>
                         <!-- chat -->
-                      <div id="profile-left" class="bordbot h-100 bg-white">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center p-2">
-                                <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
-                                <div class="p-2">
-                                    <div class="title">ciccio</div>
-                                    <div>Ultimo messaggio inviato</div>
+                      <div id="profile-left" class=" h-100 bg-white">
+
+                          <div class="bordbot" v-for="(item, index) in contacts">
+                              <div class="d-flex justify-content-between">
+                                  <div class="d-flex align-items-center p-2 ">
+                                      <img class ="rounded-circle" :src=imgProfile(index) alt="">
+                                      <div class="p-2">
+                                          <div class="title">{{item.name}}</div>
+                                          <div>Ultimo messaggio inviato</div>
+                                        </div>
+                                    </div>
+                                    <div>orario</div>  
                                 </div>
                             </div>
-                            <div>orario</div>  
                         </div>
-                    </div>
-
+                            
 
                 </div>
 
@@ -74,7 +77,7 @@
                         <div class="profile-pic col-profile d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img class ="rounded-circle" src="./img/avatar_1.jpg" alt="">
-                                <div class="p-2 title">ciccio</div>
+                                <div class="p-2 title">Leonardo</div>
                             </div>
                             <div class="notification">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -116,7 +119,7 @@
 
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

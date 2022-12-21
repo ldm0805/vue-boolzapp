@@ -1,6 +1,6 @@
 const {
     createApp
-} = Vue;
+} = Vue
 // Array di oggetti
 createApp({
     data(){
@@ -170,4 +170,8 @@ createApp({
         ]
         }
     },
+    methods:{
+        imgProfile(index){
+            return "./img/avatar" + this.contacts[index].avatar + ".jpg";}
+    }
 }).mount('#app');

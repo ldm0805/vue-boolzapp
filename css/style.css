@@ -90,3 +90,7 @@ i{
 span.input-group-text{
     background-color: white;
 }
+
+#profile-left{
+    overflow-y: auto;
+}
