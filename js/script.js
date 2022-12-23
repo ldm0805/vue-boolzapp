@@ -5,9 +5,19 @@ const {
 createApp({
     data(){
         return{
-            activeItem: 0,
+
+
             
+            activeItem: 0,
             newMessage: '',
+            newTask: '',
+            newmex: '',
+            search: '',
+            user:{
+                name: 'Leonarda',
+                avatar: '_io'
+            },
+            todolist:[],
             contacts: [
                 {
                 name: 'Michele',
@@ -173,20 +183,82 @@ createApp({
         ]
         }
     },
+    //Ricerca nella chat
+    computed: {
+        contactFind() {
+            let filterlist;
+            if (this.search != '') {
+                filterlist = this.contacts.filter((element) => {
+                    return element.name.toLowerCase().includes(this.search.toLowerCase())
+                })
+            }
+            else {
+                filterlist = this.contacts
+            }
+            return filterlist      
+        }
+    },
     methods:{
+        //Stampa contatti e chat
         imgProfile(index){
             return "./img/avatar" + this.contacts[index].avatar + ".jpg";
         },
-        // addMessage(){
-        //     let object = {
-        //         message: this.newMessage,
-        //         status :'sent' ,
-        //     }
-        //     this.contacts.push(object);
-        //     this.newMessage = '';
-        // },
         selectedChat(index){
             this.activeItem = index
         },
+        chatSendRec(number, active) {
+            const chatSendRec = this.contacts[active].messages[number].message
+            return chatSendRec
+         },
+
+        // Rimuove elementi dalla lista
+        removeTask(index){
+            this.todolist.splice(index, 1);
+        },
+        // Controlla se gli elementi nella lista hanno done = true.
+        checkTask(index){
+            let task = this.todolist[index];
+            if(task.done == true){
+                task.done = false;
+            }
+            else{
+                task.done = true;
+            }
+        },
+        getTime(d){
+            let date = luxon.DateTime.fromFormatExplain(d, "dd/MM/yyyy hh:mm:ss")
+            return date.result.hour + ":" + date.rawMatches[9]
+          },
+          currentTime(){
+            return luxon.DateTime.now().toFormat("dd/MM/yyyy hh:mm:ss");;
+          },
+        
+          //Nuovi messaggi e risposta automatica
+
+    enterMessage(){
+      if(this.newTask.split(" ").join("") != ''){
+        this.contacts[this.activeItem].messages.push(
+          {
+            date: this.currentTime(),
+            message: this.newTask,
+            status: 'sent'
+          }
+        )
+        this.newTask = '';
+        
+        
+        setTimeout(() => {
+          const realTime = this.currentTime();
+          this.contacts[this.activeItem].messages.push(
+            {
+              date: realTime,
+              message: 'Lo so',
+              status: 'received'
+            }
+          )
+          this.contacts[this.activeItem].lastAccess = this.getTime(realTime);
+        }, 2000);
+        }
+    }
     }
 }).mount('#app');

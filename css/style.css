@@ -18,6 +18,17 @@ i.fa-solid{
     font-size: x-small;
 }
 
+.fa-bell-slash{
+    font-size: 30px;
+    padding: .5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1000px;
+
+    background-color: white;
+    color:#8edafc;
+}
+
 .bg-gray{
     background-color: rgba(192, 192, 192, 0.192);
 }
@@ -32,14 +43,10 @@ i:hover{
 
     cursor: pointer;
 }
-/* #new-message .fa-solid{
-    font-size: 20px;
-    background-color: white;
-    padding: 9px;
-    border-radius: 50%;
-    color: #8edafc;
-} */
 
+.col-profile{
+    height: 70px;
+}
 .title{
     font-size: 20px;
     font-weight: bold;
@@ -97,6 +104,7 @@ i{
 }
 
 .background-image{
+    overflow-y: auto;
     position: relative;
     height: 100%;
     background-image: url("../img/mine.jpg");
@@ -113,16 +121,65 @@ span.input-group-text{
     overflow-y: auto;
 }
 
-.received{
-    background-color: #ffffff;
+.received, .sent{
     padding: 10px;
     margin: 1em;
+    min-width: 10%;
     border-radius: 20px;
+    width: fit-content;
+}
+
+.received{
+    background-color: #ffffff;
+    align-self: flex-start;
 }
 
 .sent{
     background-color: #d5f9ba;
-    padding: 10px;
-    margin: 1em;
-    border-radius: 20px;
+    align-self: flex-end;
+}
+
+.fa-microphone:active{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0,150,136,1);
+    animation: pulse .9s infinite;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+
+.col-chat{
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-chevron-down{
+    font-size: 15px;
+}
+
+
+.banner {
+    height: 60px;
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid gray;
+}
+
+.inner-mex {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-mex:first-child {
+    border-bottom: 1px solid gray;
+}
+.v {
+    margin-bottom: 10px;
+    text-align: right;
 }
