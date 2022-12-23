@@ -240,9 +240,11 @@ createApp({
         }, 2000);
         }
     },
-            // // Rimuove elementi dalla lista
-            // removeTask(index){
-            //     this.contacts[this.activeItem].messages.splice(index, 1);
-            // },
+            // Rimuove elementi dalla lista
+            removeTask(index){
+                this.contacts[index].messages.splice(index, 1);
+            },
+
+            
     }
 }).mount('#app');
