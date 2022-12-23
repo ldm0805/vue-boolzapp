@@ -104,14 +104,12 @@
                         <div class="row mt-3">
                             <div class="col-12">
                                 <div>
-                                    <ul class="list-unstyled ">
+                                    <ul class="list-unstyled">
                                         <!-- Ciclo per stampare le chat di default-->
                                         <li class="list-item d-flex flex-column"  v-for="(item, index) in contacts[activeItem].messages">
                                             <div :class="(contacts[activeItem].messages[index].status == 'sent') ? 'sent' : 'received'">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="cursor" v-if="!item.edit">
+                                                    <div class="cursor">
                                                         {{ chatSendRec(index, activeItem) }}
-                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -119,7 +117,7 @@
                                         <li class="list-item  d-flex flex-column" v-for="(item, index) in newMessage">
                                             <div v-bind:class="item.done ? 'sent' : ''">
                                                 <div class="d-flex flex-column">
-                                                    <div class="cursor sent" v-if="!item.edit">
+                                                    <div class="cursor sent">
                                                         {{item.text}}
                                                     </div>
                                                 </div>

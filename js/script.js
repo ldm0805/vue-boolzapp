@@ -5,19 +5,14 @@ const {
 createApp({
     data(){
         return{
-
-
-            
             activeItem: 0,
             newMessage: '',
             newTask: '',
-            newmex: '',
             search: '',
             user:{
                 name: 'Leonarda',
                 avatar: '_io'
             },
-            todolist:[],
             contacts: [
                 {
                 name: 'Michele',
@@ -210,21 +205,6 @@ createApp({
             const chatSendRec = this.contacts[active].messages[number].message
             return chatSendRec
          },
-
-        // Rimuove elementi dalla lista
-        removeTask(index){
-            this.todolist.splice(index, 1);
-        },
-        // Controlla se gli elementi nella lista hanno done = true.
-        checkTask(index){
-            let task = this.todolist[index];
-            if(task.done == true){
-                task.done = false;
-            }
-            else{
-                task.done = true;
-            }
-        },
         getTime(d){
             let date = luxon.DateTime.fromFormatExplain(d, "dd/MM/yyyy hh:mm:ss")
             return date.result.hour + ":" + date.rawMatches[9]
