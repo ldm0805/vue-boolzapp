@@ -221,7 +221,7 @@ createApp({
           {
             date: this.currentTime(),
             message: this.newTask,
-            status: 'sent'
+            status: 'sent',
           }
         )
         this.newTask = '';
@@ -239,6 +239,10 @@ createApp({
           this.contacts[this.activeItem].lastAccess = this.getTime(realTime);
         }, 2000);
         }
-    }
+    },
+            // // Rimuove elementi dalla lista
+            // removeTask(index){
+            //     this.contacts[this.activeItem].messages.splice(index, 1);
+            // },
     }
 }).mount('#app');

@@ -110,20 +110,24 @@
                                             <div :class="(contacts[activeItem].messages[index].status == 'sent') ? 'sent' : 'received'">
                                                     <div class="cursor">
                                                         {{ chatSendRec(index, activeItem) }}
-                                                </div>
+                                                    </div>
                                             </div>
                                         </li>
                                         <!-- Stampa messaggi di invio -->
                                         <li class="list-item  d-flex flex-column" v-for="(item, index) in newMessage">
-                                            <div v-bind:class="item.done ? 'sent' : ''">
+                                            <div v-bind:class="(contacts[activeItem].messages[index].status == 'sent') ? 'sent' : ''">
                                                 <div class="d-flex flex-column">
-                                                    <div class="cursor sent">
+                                                    <div class="cursor">
                                                         {{item.text}}
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
+                                    <!-- Bottone per rimuovere gli elementi -->
+                                       <!-- <button class="button btn-square button-delete" @click="removeTask(index)">
+                                           <i class="fa-solid fa-xmark"></i>
+                                       </button> -->
                                 </div>
                             </div>
                         </div>
